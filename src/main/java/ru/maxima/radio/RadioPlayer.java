@@ -12,7 +12,4 @@ public class RadioPlayer {
         System.out.println(radio.getCurrentSong());
     }
 
-//    public void playRadio(Radio radio) {
-//        System.out.println(radio.getCurrentSong());
-//    }
 }
