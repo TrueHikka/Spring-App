@@ -1,14 +1,21 @@
 package ru.maxima.radio;
 
-public class RadioMaximum implements Radio {
-    private String song;
+import java.util.List;
 
-    public RadioMaximum(String song) {
-        this.song = song;
+public class RadioMaximum implements Radio {
+    private List<String> songsOnTheRadioMaximum;
+
+    public RadioMaximum(List<String> songsOnTheRadioMaximum) {
+        this.songsOnTheRadioMaximum = songsOnTheRadioMaximum;
     }
 
     @Override
-    public String getCurrentSong() {
-        return song;
+    public List<String> getCurrentSong() {
+        return songsOnTheRadioMaximum;
+    }
+
+    @Override
+    public String getStationName() {
+        return "Radio Maximum";
     }
 }

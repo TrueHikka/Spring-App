@@ -1,5 +1,8 @@
 package ru.maxima.radio;
 
+import java.util.List;
+
 public interface Radio {
-    String getCurrentSong();
+    List<String> getCurrentSong();
+    String getStationName();
 }
