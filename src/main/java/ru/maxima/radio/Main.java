@@ -21,5 +21,6 @@ public class Main {
         Radio mixedRadio = context.getBean("idOfMixedRadio", MixedRadio.class);
         RadioPlayer radioPlayer = new RadioPlayer(mixedRadio);
         System.out.println(radioPlayer.playMixedRadio(mixedRadio));
+
     }
 }
