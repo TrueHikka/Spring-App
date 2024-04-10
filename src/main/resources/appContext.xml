@@ -7,14 +7,44 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="idOfRadioMaximum"
-          class="ru.maxima.radio.RadioMaximum">
-        <constructor-arg value="Red Hot Chili Peppers - Californication" />
+    <bean id="idOfRadioMaximum" class="ru.maxima.radio.RadioMaximum">
+        <constructor-arg>
+            <list>
+                <value>Green Day - Dilemma</value>
+                <value>Cage The Elephant - Neon Pill</value>
+                <value>Royal Blood - Pull Me Through</value>
+            </list>
+        </constructor-arg>
     </bean>
 
-    <bean id="idOfRadioEnergy"
-          class="ru.maxima.radio.RadioEnergy">
-        <constructor-arg value="Avicii - Levels" />
+    <bean id="idOfRadioEnergy" class="ru.maxima.radio.RadioEnergy">
+        <constructor-arg>
+            <list>
+                <value>David GUETTA &amp; Kim PETRAS - When We Were Young</value>
+                <value>SIA - Gimme Love</value>
+                <value>Tate MCRAE - Greedy</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="idOfDarkUndergroundRadio" class="ru.maxima.radio.DarkUndergroundRadio">
+        <constructor-arg>
+            <list>
+                <value>Mareux - Killer</value>
+                <value>Decades - Move Me</value>
+                <value>Demob Happy - Pictures of you</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="idOfMixedRadio" class="ru.maxima.radio.MixedRadio">
+        <constructor-arg>
+            <list>
+                <ref bean="idOfRadioMaximum"/>
+                <ref bean="idOfRadioEnergy"/>
+                <ref bean="idOfDarkUndergroundRadio"/>
+            </list>
+        </constructor-arg>
     </bean>
 
 </beans>

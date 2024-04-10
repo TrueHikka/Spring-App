@@ -1,15 +1,23 @@
 package ru.maxima.radio;
 
-public class RadioEnergy implements Radio {
-    private String song;
+import java.util.List;
 
-    public RadioEnergy(String song) {
-        this.song = song;
+public class RadioEnergy implements Radio {
+    private List<String> songsOnTheRadioEnergy;
+    private String nameOfTheRadioStation;
+
+    public RadioEnergy(List<String> songsOnTheRadioEnergy) {
+        this.songsOnTheRadioEnergy = songsOnTheRadioEnergy;
     }
 
     @Override
-    public String getCurrentSong() {
-        return song;
+    public List<String> getCurrentSong() {
+        return songsOnTheRadioEnergy;
+    }
+
+    @Override
+    public String getStationName() {
+        return "Radio Energy";
     }
 }
 
